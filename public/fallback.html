@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PsycheMed IA - Page de secours</title>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0f172a;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      
+      .container {
+        background: rgba(15, 23, 42, 0.75);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 40px;
+        max-width: 600px;
+        text-align: center;
+      }
+      
+      h1 {
+        color: #3b82f6;
+        margin-bottom: 20px;
+      }
+      
+      p {
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+      
+      .error-details {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        padding: 12px;
+        margin-top: 24px;
+        text-align: left;
+        font-size: 14px;
+        color: #94a3b8;
+      }
+      
+      .action-button {
+        background-color: #3b82f6;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 500;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.2s;
+      }
+      
+      .action-button:hover {
+        background-color: #2563eb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>PsycheMed IA</h1>
+      <p>Cette page de secours s'affiche car il y a eu un problème lors du chargement de l'application principale.</p>
+      <p>Essayez de rafraîchir la page ou de vérifier la console développeur pour plus d'informations.</p>
+      
+      <div class="error-details">
+        <strong>Problèmes possibles :</strong>
+        <ul>
+          <li>Erreur lors du rendu React</li>
+          <li>Problème avec la configuration du routeur</li>
+          <li>Styles CSS non chargés</li>
+          <li>Dépendances manquantes</li>
+        </ul>
+      </div>
+      
+      <button class="action-button" onclick="window.location.reload()">Rafraîchir la page</button>
+    </div>
+    
+    <script>
+      console.log('Page de secours PsycheMed IA chargée');
+      
+      // Détection des erreurs JavaScript
+      window.onerror = function(message, source, lineno, colno, error) {
+        console.error('Erreur détectée:', message);
+        console.error('Source:', source);
+        console.error('Ligne:', lineno);
+        console.error('Colonne:', colno);
+        console.error('Objet d\'erreur:', error);
+        
+        // Afficher l'erreur sur la page
+        const errorDetails = document.querySelector('.error-details');
+        const errorInfo = document.createElement('div');
+        errorInfo.style.marginTop = '16px';
+        errorInfo.style.color = '#ef4444';
+        errorInfo.innerHTML = `<strong>Erreur JavaScript:</strong><br>${message}<br>Ligne: ${lineno}, Colonne: ${colno}`;
+        errorDetails.appendChild(errorInfo);
+        
+        return false;
+      };
+    </script>
+  </body>
+</html>

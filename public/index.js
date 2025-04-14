@@ -1,0 +1,1 @@
+console.log('Application PsycheMed IA chargée');
