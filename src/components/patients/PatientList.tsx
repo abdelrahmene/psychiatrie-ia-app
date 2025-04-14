@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import { 
   FaUserCircle, 
   FaPhoneAlt, 
-  FaCalendarAlt, 
-  FaEllipsisV, 
   FaExclamationTriangle,
   FaEye,
   FaEdit,

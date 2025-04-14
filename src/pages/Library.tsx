@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { 
   FaSearch, 
   FaBookMedical, 
-  FaFileAlt, 
   FaStar, 
   FaRegStar, 
   FaDownload, 
@@ -205,14 +204,6 @@ const Library: React.FC = () => {
     );
   };
 
-  // Filtrer les documents selon recherche et catégorie
-  const getFilteredDocuments = () => {
-    const allDocuments = [
-      ...documents.dsm,
-      ...documents.articles,
-      ...documents.protocols,
-      ...documents.scales
-    ];
     
     return allDocuments.filter(doc => {
       const matchesSearch = doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||

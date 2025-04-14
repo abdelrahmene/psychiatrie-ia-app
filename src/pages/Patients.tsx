@@ -11,7 +11,7 @@ interface Patient {
 }
 
 const Patients = () => {
-  const [patients, setPatients] = useState<Patient[]>([
+  const [patients] = useState<Patient[]>([
     {
       id: 1,
       name: "Ahmed M.",

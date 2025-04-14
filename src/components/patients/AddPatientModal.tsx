@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaTimes, FaUpload, FaUser, FaIdCard, FaPhone, FaCalendarAlt, FaVenusMars, FaNotesMedical } from 'react-icons/fa';
+import { FaTimes, FaUpload, FaUser, FaIdCard, FaPhone, FaCalendarAlt, FaVenusMars } from 'react-icons/fa';
 
 interface AddPatientModalProps {
   onClose: () => void;
