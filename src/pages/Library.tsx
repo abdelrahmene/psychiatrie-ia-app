@@ -204,21 +204,6 @@ const Library: React.FC = () => {
     );
   };
 
-    
-    return allDocuments.filter(doc => {
-      const matchesSearch = doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           doc.description.toLowerCase().includes(searchQuery.toLowerCase());
-      
-      const matchesCategory = filterCategory === 'all' || 
-                             filterCategory === 'favorites' ? true : doc.category === filterCategory;
-      
-      const matchesFavorites = filterCategory === 'favorites' ? favorites.includes(doc.id) : true;
-      
-      return matchesSearch && matchesCategory && matchesFavorites;
-    });
-  };
-
-  // Obtenir les documents pour l'onglet actif
   const getTabDocuments = () => {
     switch(activeTab) {
       case 'dsm':
