@@ -111,11 +111,12 @@ const Patients = () => {
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">{patient.status}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">
                       <button
-                        onClick={(e) => {
-                          e.stopPropagation();
+                        onClick={() => {
                           handleEditPatient(patient);
                         }}
                         className="text-blue-500 hover:text-blue-600 mr-2"
+                        title="Modifier le patient"
+                        aria-label="Modifier le patient"
                       >
                         <FaEdit size={16} />
                       </button>
@@ -125,6 +126,8 @@ const Patients = () => {
                           handleDeletePatient(patient);
                         }}
                         className="text-red-500 hover:text-red-600"
+                        title="Supprimer le patient"
+                        aria-label="Supprimer le patient"
                       >
                         <FaTrash size={16} />
                       </button>
@@ -145,6 +148,8 @@ const Patients = () => {
                 <button
                   onClick={() => setSelectedPatient(null)}
                   className="text-gray-500 hover:text-gray-700"
+                  title="Fermer les détails"
+                  aria-label="Fermer les détails"
                 >
                   <FaUser size={16} />
                 </button>

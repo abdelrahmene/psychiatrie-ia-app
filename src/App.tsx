@@ -185,6 +185,8 @@ const App: React.FC = () => {
               <button 
                 onClick={toggleSidebar}
                 className={`p-2 rounded-md ${darkMode ? 'text-slate-400 hover:bg-slate-700' : 'text-gray-600 hover:bg-gray-100'}`}
+                title="Ouvrir ou fermer le menu"
+                aria-label="Ouvrir ou fermer le menu"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
@@ -211,6 +213,8 @@ const App: React.FC = () => {
               <button
                 onClick={toggleDarkMode}
                 className={`p-2 rounded-md ${darkMode ? 'text-slate-400 hover:bg-slate-700' : 'text-gray-600 hover:bg-gray-100'}`}
+                title="Basculer le mode sombre"
+                aria-label="Basculer le mode sombre"
               >
                 {darkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
               </button>
@@ -219,6 +223,8 @@ const App: React.FC = () => {
                 <button
                   onClick={() => setShowNotifications(!showNotifications)}
                   className={`p-2 rounded-md ${darkMode ? 'text-slate-400 hover:bg-slate-700' : 'text-gray-600 hover:bg-gray-100'}`}
+                  title="Afficher les notifications"
+                  aria-label="Afficher les notifications"
                 >
                   <FaBell size={18} />
                   <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>

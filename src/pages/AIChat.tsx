@@ -77,10 +77,10 @@ const AIChat = () => {
               <h1 className="text-xl font-bold">Assistant IA</h1>
             </div>
             <div className="flex items-center gap-2">
-              <button className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-slate-700">
+              <button className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-slate-700" title="Joindre un fichier" aria-label="Joindre un fichier">
                 <FaPaperclip size={16} />
               </button>
-              <button className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-slate-700">
+              <button className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-slate-700" title="Activer le micro" aria-label="Activer le micro">
                 <FaMicrophone size={16} />
               </button>
             </div>

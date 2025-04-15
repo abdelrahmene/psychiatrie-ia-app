@@ -97,6 +97,8 @@ const AddPatientModal: React.FC<AddPatientModalProps> = ({ onClose }) => {
           <button
             onClick={onClose}
             className="absolute top-4 right-4 p-2 rounded-full hover:bg-slate-700/50 text-slate-400 hover:text-white transition-colors"
+            title="Fermer la fenêtre"
+            aria-label="Fermer la fenêtre"
           >
             <FaTimes size={20} />
           </button>
@@ -212,16 +214,22 @@ const AddPatientModal: React.FC<AddPatientModalProps> = ({ onClose }) => {
                   <div>
                     <label className="block text-sm font-medium text-slate-300 mb-1">Date de naissance</label>
                     <div className="relative">
+                      <label htmlFor="birthDate" className="sr-only">
+                        Date de naissance
+                      </label>
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <FaCalendarAlt className="text-slate-400" size={16} />
                       </div>
                       <input
+                        id="birthDate"
                         type="date"
                         name="birthDate"
                         value={formData.birthDate}
                         onChange={handleChange}
                         className="w-full pl-10 pr-4 py-2 bg-slate-700/40 border border-slate-600 rounded-md text-slate-200 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                         required
+                        placeholder="Date de naissance"
+                        title="Date de naissance"
                       />
                     </div>
                   </div>
@@ -233,12 +241,17 @@ const AddPatientModal: React.FC<AddPatientModalProps> = ({ onClose }) => {
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <FaVenusMars className="text-slate-400" size={16} />
                       </div>
+                      <label htmlFor="gender" className="sr-only">
+                        Genre du patient
+                      </label>
                       <select
+                        id="gender"
                         name="gender"
                         value={formData.gender}
                         onChange={handleChange}
-                        className="w-full pl-10 pr-4 py-2 bg-slate-700/40 border border-slate-600 rounded-md text-slate-200 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full pl-10 pr-4 py-2 bg-slate-700/40 border border-slate-600 rounded-md text-sm text-slate-200 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                         required
+                        title="Genre du patient"
                       >
                         <option value="">Sélectionner</option>
                         <option value="M">Homme</option>
